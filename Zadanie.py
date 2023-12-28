@@ -1,34 +1,14 @@
-class Jezyki_programowania():
-    def __init__(self, jezyki_programowania):
-        self.jezyki_programowania = jezyki_programowania
-       
-
-
-
-
-
-
-class Python:
-    nauka = "łatwy"
-    zastosowania = "WEB, AI, CyberSecurity, Testing"
+liczby = [1,78,25,32]
+def buble_sort(arr):
+    n = len(arr)
     
-    
-    def __init__(self, nauka, zastosowania):
-        self.nauka = nauka
-        self.zastosowania = zastosowania
+    for i in range(n):
         
-        
-        
-        
-        
-class JS(Jezyki_programowania):
-    
-    
-    
-    def __init__(self, nauka, zastosowania, jezyki_programowania):
-        self.nauka = nauka
-        self.zastosowania = zastosowania
-        super().__init__(jezyki_programowania)
-        print(jezyki_programowania)
-        
-js = JS("łatwa", "Front-End", "ble ble")          
+        for j in range(0, n-i-1):
+            
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+                
+        return arr  
+print(buble_sort(liczby))
+            
